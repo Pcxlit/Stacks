@@ -1,0 +1,40 @@
+#include<iostream>
+using namespace std;
+class stack{
+    int element[100];
+    int topp;
+    public:
+    void init(){
+        topp=-1;
+    }
+   bool isempty(){
+    if(topp==(-1)){
+     return true;}
+   }
+   bool isfull(){
+    if(topp==99){
+        return true;
+    }
+   }
+   void push(int n){
+    topp++;
+    element[topp]=n;
+   }
+   int pop(){
+    cout<<element[topp]<<" is removed"<<endl;
+    topp=topp-1;
+    return topp+1;
+   }
+   int display(){
+    for(int i=topp;i!=-1;i--){
+    cout<<element[topp];
+    }
+   }
+};
+
+int main(){
+  stack p;
+  p.push(3);
+  p.push(4);
+  return 0;
+}
